@@ -1,0 +1,30 @@
+{
+  "AWSEBDockerrunVersion": "2",
+  "containerDefinitions": [
+    {
+      "name": "backend",
+      "image": "339712746241.dkr.ecr.us-east-1.amazonaws.com/cloudlab:backend",
+      "essential": true,
+      "memory": 256,
+      "portMappings": [
+        {
+          "hostPort": 5000,
+          "containerPort": 5000
+        }
+      ]
+    },
+    {
+      "name": "frontend",
+      "image": "339712746241.dkr.ecr.us-east-1.amazonaws.com/cloudlab:frontend",
+      "essential": true,
+      "memory": 256,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ]
+    }
+  ]
+
+}
